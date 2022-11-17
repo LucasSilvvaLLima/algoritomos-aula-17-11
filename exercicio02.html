@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Digite sua idade: <input type="text" id="in_idade"></span>
+    <button onclick="analisar()">Analisar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var idade = Number(in_idade.value)
+        
+        var pontos = 0
+        
+        var validacao1 = idade >= 0 ? true : false
+        var validacao2 = idade > 12 ? true : false
+        var validacao3 = idade > 18 ? true : false
+
+        validacao1 == true ? pontos += 10 : pontos += 0 
+        validacao2 == true ? pontos += 20 : pontos += 0 
+        validacao3 == true ? pontos += 50 : pontos += 0 
+
+        var mensagem = `
+        Já passou pela infância: ${validacao1} <br>
+
+        Já passou pela adolescência: ${validacao2} <br>
+
+        Já é um idoso: ${validacao3} <br>
+
+        TOTAL DE PONTOS: ${pontos} <br>
+        `
+
+        div_mensagem.innerHTML = mensagem
+    }
+</script>

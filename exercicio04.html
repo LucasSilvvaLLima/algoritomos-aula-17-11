@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a sua frequencia: <input id="in_frequencia"></input><br>
+    <button onclick="analisar()">Analisar frequência</button><br>
+    <img id="id_img" alt="" style="height: 300px;">
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var frequencia = Number(in_frequencia.value)
+        var aluno = ``
+        frequencia < 50 ? aluno = `https://img.freepik.com/fotos-gratis/turista-com-o-polegar-para-cima_1368-7035.jpg?w=2000` : aluno = `https://canaldoensino.com.br/blog/wp-content/uploads/2016/06/bom-aluno.jpg`
+
+        id_img.src = aluno
+    }
+</script>

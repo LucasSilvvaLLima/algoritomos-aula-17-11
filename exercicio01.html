@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Digite seu login: <input type="text" id="in_login"></span>
+    <span>Digite sua senha: <input type="text" id="in_senha"></span>
+    <span>Digite seu código de segurança: <input type="text" id="in_codigo"></span>
+    <div id="div_mensagem"></div>
+    <button onclick="validar()">Validar</button>
+</body>
+
+</html>
+<script>
+    function validar() {
+        var login = in_login.value
+        var senha = in_senha.value
+        var codigo = in_codigo.value
+        var autenticacao = login == `SPTECH` && senha == `SCHOOL` && codigo == `595` ? `Usuário autenticado com sucesso` : `Falha na autenticação`
+
+        div_mensagem.innerHTML = autenticacao
+    }
+</script>
